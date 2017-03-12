@@ -1,0 +1,21 @@
+{
+    "name": "leblanc-simon/google-analytics-bundle",
+    "type": "symfony-bundle",
+    "description": "Add the javascript code for Google Analytics",
+    "license": "MIT",
+    "authors": [{
+        "name": "Simon Leblanc",
+        "email": "contact@leblanc-simon.eu",
+        "homepage": "http://www.leblanc-simon.fr",
+        "role": "Developer"
+    }],
+    "autoload": {
+        "psr-4": {
+            "LeblancSimon\\GoogleAnalyticsBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/framework-bundle": "^2.8|^3"
+    }
+}

@@ -1,0 +1,15 @@
+services:
+    googleanalytics.injector.template:
+        class: LeblancSimon\GoogleAnalyticsBundle\Injector\GoogleAnalyticsTemplate
+        arguments:
+            - "@templating"
+            - "%google_analytics.template%"
+            - "%google_analytics.id%"
+        public: false
+
+    googleanalytics.response.listener:
+        class: LeblancSimon\GoogleAnalyticsBundle\EventSubscriber\GoogleAnalyticsSubscriber
+        arguments: ["@googleanalytics.injector.template"]
+        public: true
+        tags:
+            - { name: kernel.event_subscriber }
